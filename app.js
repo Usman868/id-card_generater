@@ -3,8 +3,12 @@
     var cardPhoto = document.getElementById("cardPhoto");
 
      function submit() {
+     var upperFName = document.getElementById("fname").value;
+     var titleCaseFName = upperFName[0].toUpperCase() + (upperFName.slice(1).toLowerCase())
+     var upperLName = document.getElementById("lname").value;
+     var titleCaseLName = upperLName[0].toUpperCase() + (upperLName.slice(1).toLowerCase())
       document.getElementById("input-name").textContent =
-       " " + document.getElementById("fname").value + " " + document.getElementById("lname").value;
+       " " +titleCaseFName + " "+ titleCaseLName;
       document.getElementById("input-id").textContent =
        " " + document.getElementById("idnumber").value;
       document.getElementById("input-birthdate").textContent =
@@ -26,4 +30,5 @@
       }
       // Show card
       idCard.style.display = "block";
+
     };
