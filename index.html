@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Form -->
+  <div class="form-container">
+    <h2>ID Card Form</h2>
+    <div id="idForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="idnumber">ID Number</label>
+          <input type="text" id="idnumber" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required > 
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input type="text" id="company">
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" required>
+            <option value="">-- Select --</option>
+            <option value="Job">Job</option>
+            <option value="Student">Student</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="photo">Upload Photo</label>
+          <input type="file" id="photo" accept="image/*" required>
+        </div>
+
+        <div class="form-group form-group-full">
+          <button type="submit" onclick="submit()">Generate ID Card</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ID Card Preview -->
+  <div class="id-card" id="idCard"> 
+    <div class="id-header" id="Company-name">SMIT</div>
+    <div class="id-body">
+      <img id="cardPhoto" class="id-photo" src="" alt="ID Photo">
+      <div class="id-info">
+        <p id="cardName">Name : <span id="input-name"></span></p>
+        <p id="cardId">ID : <span id="input-id"></span></p>
+        <p id="cardDob">DOB : <span id="input-birthdate"></span></p>
+        <p id="cardEmail">Email : <span id="input-email"></span></p>
+        <p id="cardPhone">Phone : <span id="input-phone"></span></p>
+        <p id="cardRole">Role : <span id="input-role"></span></p>
+      </div>
+    </div>
+    <div class="id-footer">Authorized ID Card</div>
+  </div> 
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
